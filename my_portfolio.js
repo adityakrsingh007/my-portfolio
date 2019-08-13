@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 	$('.owl-carousel').owlCarousel({
     loop:true,
-    item:5,
+    item:4,
     responsive:{
         0:{
             items:2
@@ -31,7 +31,7 @@ $(document).ready(function(){
             items:2
         },
         768:{
-            items:3
+            items:2
         },
         938:{
             items:4
@@ -69,5 +69,13 @@ $(document).ready(function(){
 	});
 
 });
+
+ $("#navigation li a").click(function(e){
+ 		e.preventDefault();
+
+ 		var target = $(this).attr("href");
+ 		var position = 	$(target).offset().top;
+ 		$("html, body").animate({scrollTop: position - 20}, "slow")
+ });
 
 
